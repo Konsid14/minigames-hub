@@ -163,8 +163,8 @@ class MainActivity : Activity() {
                             locked = true
                             Handler(Looper.getMainLooper()).postDelayed({
                                 this@MainActivity.runOnUiThread {
-                                    buttons[a].text = "?"
-                                    buttons[b].text = "?"
+                                    (grid.getChildAt(a) as Button).text = "?"
+                                    (grid.getChildAt(b) as Button).text = "?"
                                     opened.clear()
                                     locked = false
                                 }
